@@ -237,6 +237,8 @@ window.Lattice=L;
 })();`;
 
 const HEAD = `<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#0b0b10"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23ff7a1a'/%3E%3Cstop%20offset='1'%20stop-color='%23ff5470'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230b0b10'/%3E%3Cpath%20d='M32%209L55%2032L32%2055L9%2032Z'%20fill='url(%23g)'/%3E%3Cpath%20d='M32%2020L44%2032L32%2044L20%2032Z'%20fill='%230b0b10'%20opacity='.25'/%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>${CSS}</style>`;
