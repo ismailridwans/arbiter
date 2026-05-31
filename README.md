@@ -80,16 +80,16 @@ Run on the live **2026 NBA Finals (Spurs vs Knicks)** market tree — **615 acti
 
 **2. The long tail is *not* — the engine flags it.** Arbiter's overround metric reports the 30-team championship field summing to **Σ = 1.485 (a +48.5% overround)**: eliminated teams still carry stale probability mass (an out team quoted at ~8% when its true probability is 0). Real, large structural incoherence — though harvesting it cleanly is liquidity-constrained on dead-team books (the honest catch).
 
-**3. Backtest + cost sensitivity** (real Polymarket price history): the `champion ⊑ conference` relation was violated **87 times** over the season. As the assumed per-leg cost rises, only the fattest, genuinely-tradeable edges survive — and those are net positive and market-neutral:
+**3. Backtest + cost sensitivity** (real Polymarket price history): the `champion ⊑ conference` relation was violated **88 times** over the season. As the assumed per-leg cost rises, only the fattest, genuinely-tradeable edges survive — and those are net positive and market-neutral:
 
 | Cost / leg | Opportunities | Deployed | Locked profit | ROI |
 |---|---|---|---|---|
-| 0.0% | 87 | $4,350 | $11.17 | 0.26% |
-| 0.3% | 7 | $350 | $2.78 | 0.80% |
-| 0.5% | 4 | $200 | $1.69 | 0.84% |
-| 0.8% | 1 | $50 | $1.30 | 2.60% |
+| 0.0% | 88 | $4,400 | $24.38 | 0.55% |
+| 0.3% | 8 | $400 | $15.68 | 3.92% |
+| 0.5% | 5 | $250 | $14.27 | 5.71% |
+| 0.8% | 2 | $100 | $13.57 | 13.57% |
 
-(`npx tsx src/cli.ts backtest --sensitivity`)
+*Snapshot as of 2026-05-31 — these are **recomputed live** from Polymarket's `/prices-history` on every run, so the exact counts drift upward as the season's history grows. Note profit falls monotonically with cost ($24→$13) while ROI rises, because higher assumed cost filters out the marginal edges and leaves only the fattest. Run it yourself: `npx tsx src/cli.ts backtest --sensitivity` (CLI defaults now match this dashboard view: daily resolution, 0.5%/leg).*
 
 **4. Cross-venue (the real frontier).** The engine fetches the *same* 2026 NBA Champion market from **both Polymarket and Kalshi** and matches all 30 teams. Live right now: Spurs `PM 64.3% vs Kalshi 63.5%`, Knicks `PM 35.4% vs Kalshi 36.5%` — independent order books, small disagreements that Kalshi's fee currently eats (the engine reports "no arb clears right now — watching"). But this is *where fat arbs persist*: two venues that can't both be right, with fee-aware detection armed to fire the instant they diverge. (`npx tsx src/cli.ts crossvenue`)
 

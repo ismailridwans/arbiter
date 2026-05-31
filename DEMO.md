@@ -25,7 +25,7 @@ Point at the dashboard stages, lattice, coherence status, and `.canon/execution/
 
 ### 2:15–3:15 — It actually profits (Real-World Utility + Risk)
 Run `npx tsx src/cli.ts backtest --fidelity 1440 --haircut 0.005 --save`:
-> "On the full playoff season of real price history, the champion-implies-conference relation broke 87 times. After a realistic half-percent-per-leg cost, the engine captured **4 risk-free opportunities** — small, but **real and market-neutral**. We don't fake a 300% return; a market-neutral engine plus an honest efficiency study is the credible result. Risk is managed by net-edge gating, liquidity-aware sizing, and quarter-Kelly caps."
+> "On the full playoff season of real price history, the champion-implies-conference relation broke dozens of times. After a realistic half-percent-per-leg cost, the engine captured a handful of **risk-free opportunities** — small, but **real and market-neutral**. We don't fake a 300% return; a market-neutral engine plus an honest efficiency study is the credible result. Risk is managed by net-edge gating, liquidity-aware sizing, and quarter-Kelly caps."
 
 Show the backtest table + equity curve + `report`.
 

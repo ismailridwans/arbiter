@@ -173,9 +173,9 @@ program
 program
   .command('backtest')
   .description('Replay historical Polymarket prices and report coherence-arbitrage P&L')
-  .option('--fidelity <min>', 'history resolution in minutes (60=hourly, 1440=daily)', toInt, 60)
+  .option('--fidelity <min>', 'history resolution in minutes (60=hourly, 1440=daily)', toInt, 1440)
   .option('--threshold <n>', 'minimum raw violation to act on', parseFloat, 0)
-  .option('--haircut <n>', 'per-leg spread/slippage haircut in price units', parseFloat, 0.01)
+  .option('--haircut <n>', 'per-leg spread/slippage haircut in price units', parseFloat, 0.005)
   .option('--size <usd>', 'notional per captured edge', parseFloat, 50)
   .option('--sensitivity', 'also sweep the per-leg cost assumption', false)
   .option('--save', 'write the run to .canon/execution/', false)
