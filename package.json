@@ -1,0 +1,40 @@
+{
+  "name": "arbiter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Arbiter — a market-neutral coherence-arbitrage engine for prediction markets. Built for the DEGA NBA Playoffs Prediction Market Hackathon on Canon CLI.",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "arbiter": "./src/cli.ts"
+  },
+  "scripts": {
+    "scan": "tsx src/cli.ts scan",
+    "serve": "tsx src/cli.ts serve",
+    "start": "tsx src/cli.ts start",
+    "backtest": "tsx src/cli.ts backtest",
+    "report": "tsx src/cli.ts report",
+    "dev": "tsx watch src/cli.ts start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^3.0.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

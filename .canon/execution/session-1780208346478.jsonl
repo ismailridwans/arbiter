@@ -1,0 +1,5 @@
+{"ts":1780208346483,"kind":"session","strategy":"nba-coherence-arb","mode":"paper","minEdge":0.02,"bankrollUsd":1000}
+{"ts":1780208347610,"kind":"cycle","cycle":1,"marketCount":619,"nodes":32,"edges":0,"tradeable":0,"orders":0,"fills":0,"capturedUsd":0}
+{"ts":1780208348901,"kind":"cycle","cycle":2,"marketCount":619,"nodes":32,"edges":0,"tradeable":0,"orders":0,"fills":0,"capturedUsd":0}
+{"ts":1780208350056,"kind":"cycle","cycle":3,"marketCount":619,"nodes":32,"edges":0,"tradeable":0,"orders":0,"fills":0,"capturedUsd":0}
+{"ts":1780208350059,"kind":"info","event":"stopped","cycles":3}

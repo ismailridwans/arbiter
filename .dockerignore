@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+.canon
+.env
+.env.*
+.git
+*.log

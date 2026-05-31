@@ -1,0 +1,31 @@
+{
+  "name": "arbiter",
+  "description": "Arbiter — a market-neutral coherence-arbitrage engine for NBA prediction markets",
+  "strategy": "arbiter",
+  "entry": "src/strategy/coherence-strategy.ts",
+  "pipeline": ["fetch", "analyze", "decide", "execute"],
+  "executionDir": ".canon/execution",
+  "venue": {
+    "platform": "polymarket",
+    "network": "polygon",
+    "gammaApi": "https://gamma-api.polymarket.com",
+    "clobApi": "https://clob.polymarket.com"
+  },
+  "agents": {
+    "marketAnalyst": "src/coherence/detector.ts",
+    "strategyArchitect": "src/coherence/graph.ts",
+    "developer": "src/strategy/coherence-strategy.ts",
+    "qa": "test/"
+  },
+  "risk": {
+    "minEdge": 0.02,
+    "kellyFraction": 0.25,
+    "maxStakePerLegUsd": 50,
+    "bankrollUsd": 1000,
+    "takerFeeBps": 0
+  },
+  "execution": {
+    "mode": "paper",
+    "pollIntervalMs": 15000
+  }
+}
