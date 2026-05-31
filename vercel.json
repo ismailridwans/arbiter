@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npx tsx scripts/build-static.ts && npx tsx scripts/build-functions.ts",
+  "outputDirectory": "public",
+  "rewrites": [{ "source": "/dashboard", "destination": "/dashboard/index.html" }]
+}

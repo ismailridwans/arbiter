@@ -153,15 +153,17 @@ export async function fetchPairHistories(
     await Promise.all(SEED_EVENT_SLUGS.map((s) => client.fetchEventBySlug(s).catch(() => [])))
   ).flat();
   const pairs = buildPairs(raw);
-  const out: PairHistory[] = [];
-  for (const pair of pairs) {
-    const [subHist, supHist] = await Promise.all([
-      client.fetchPriceHistory(pair.subToken, fidelityMin).catch(() => [] as PricePoint[]),
-      client.fetchPriceHistory(pair.supToken, fidelityMin).catch(() => [] as PricePoint[]),
-    ]);
-    out.push({ team: pair.team, relation: `${pair.subKind} ⊑ ${pair.supKind}`, subHist, supHist });
-  }
-  return out;
+  // Fetch all pairs' histories concurrently (keeps the backtest within
+  // serverless time limits; the local CLI benefits too).
+  return Promise.all(
+    pairs.map(async (pair) => {
+      const [subHist, supHist] = await Promise.all([
+        client.fetchPriceHistory(pair.subToken, fidelityMin).catch(() => [] as PricePoint[]),
+        client.fetchPriceHistory(pair.supToken, fidelityMin).catch(() => [] as PricePoint[]),
+      ]);
+      return { team: pair.team, relation: `${pair.subKind} ⊑ ${pair.supKind}`, subHist, supHist };
+    }),
+  );
 }
 
 /** PURE: aggregate pre-fetched histories into a result for a given param set. */
