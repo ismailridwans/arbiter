@@ -10,7 +10,7 @@
 | **Source code** (public GitHub) | ✅ | **https://github.com/ismailridwans/arbiter** (public) |
 | **Live demo** (hosted, judges can click) | ✅ | **https://arbiter-peach.vercel.app** (landing + `/dashboard`) |
 | **Documentation** (setup + `about` flow) | ✅ | [README](README.md) (setup) + [ABOUT.md](ABOUT.md) (flow) |
-| **Demo video** (3–5 min) | ⬜ *you record + upload* | script in [DEMO.md](DEMO.md) |
+| **Demo video** (3 min) | ✅ | **https://youtu.be/dGCtlMwpMoo** |
 | **Automation logs** (`.canon/execution/`) | ✅ | `.canon/execution/*.jsonl` (committed sample runs) |
 
 ## Paste-ready project description
@@ -22,12 +22,13 @@
 ## Submission links (paste into the BUIDL form)
 - **Source code:** https://github.com/ismailridwans/arbiter  *(public — verified; `.env`/secrets excluded)*
 - **Live demo:** https://arbiter-peach.vercel.app  *(landing + `/dashboard`, real-time data + Groq AI agents)*
-- **Demo video:** *(add your YouTube/Loom link after recording)*
+- **Demo video:** https://youtu.be/dGCtlMwpMoo  *(3 min)*
 
 ## What's left — only you can do these
-1. 🎥 **Record the 3–5 min demo video** (script: [DEMO.md](DEMO.md)) and upload it (YouTube/Loom), then paste the link above + into the BUIDL.
-2. 📤 **File the BUIDL** at the hackathon page above (your DoraHacks account → submit form → paste the three links).
-3. 🔐 **Rotate the secrets** that were shared in chat (Groq key, GitHub PAT, Vercel token); after rotating Groq, update `GROQ_API_KEY` in Vercel env + redeploy so the live AI keeps working.
+1. 📤 **File the BUIDL** at the hackathon page above (your DoraHacks account → submit form → paste the three links: source, live demo, video).
+2. 🔐 **Rotate the secrets** that were shared in chat (Groq key, GitHub PAT, Vercel token); after rotating Groq, update `GROQ_API_KEY` in Vercel env + redeploy so the live AI keeps working.
+
+*(Demo video ✅ recorded & uploaded: https://youtu.be/dGCtlMwpMoo)*
 
 ## Talk track per judging criterion
 - **Innovation (25%)** — market-neutral *coherence* arbitrage; you never predict an outcome. The AI-built lattice generalizes to any event.

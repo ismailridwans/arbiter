@@ -4,6 +4,8 @@
 
 > **It doesn't predict who wins. It enforces the math the market forgot.**
 
+🎥 **[Demo video (3 min)](https://youtu.be/dGCtlMwpMoo)** · 🚀 **[Live dashboard](https://arbiter-peach.vercel.app)**
+
 Most prediction-market bots try to forecast outcomes better than the crowd — a hard, low-edge game. **Arbiter** does something different and provably market-neutral: it harvests the moments when a market's **own prices contradict the logic that relates them**.
 
 A team's `P(win championship)` can never exceed its `P(win conference)`, which can never exceed its `P(win current series)`. The probabilities of all 30 teams winning the title must sum to 1. `ask(YES) + ask(NO)` for one market can't drop below 1 without handing you free money. These relationships are *logical certainties* — yet because each market is a **separate order book** with fragmented liquidity, they break constantly. When they do, there's a **risk-free, model-free, market-neutral** profit waiting, regardless of who actually wins.
